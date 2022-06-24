@@ -13,14 +13,17 @@ public class App {
     public static void main(String[] args) throws ParseException {
         Medico medico = new Medico("Matheus", "Neuro-Cirugião");
         Sexo genero = Sexo.Masculino;
-        Paciente paciente = new Paciente("Samuel", 18, genero);
+        Paciente paciente = new Paciente("Clara", 18, genero);
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         Date data = formato.parse("15/07/2022");
 
-        Agendamento agenda = new Agendamento(medico, paciente, data, 01);
-        Consulta consulta = new Consulta(agenda, "Examinado o paciente");
-
-        System.out.println(consulta);
-
+        Agendamento agenda = new Agendamento(medico, paciente, data, 03);
+        Consulta consulta = new Consulta(agenda);
+        try {
+            consulta.finalizarConsulta(
+                    "Foi realizado verificações no pulmão do paciente.\nO mesmo se queixava de dores pulmonares. Realizei o pedido de exames.");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

@@ -12,9 +12,9 @@ public class Medico {
         File pastaMedico;
         if (System.getProperty("os.name").equalsIgnoreCase("Windows 11")
                 || System.getProperty("os.name").equalsIgnoreCase("Windows 10")) {
-            pastaMedico = new File("C:\\workspace\\Projeto3-Java\\Arquivos\\" + nome);
+            pastaMedico = new File("C:\\workspace\\Projeto3-Java\\Arquivos\\Dr. " + nome);
         } else {
-            pastaMedico = new File("/home/matheus/Programming/Projeto3-Java/Arquivos/" + nome);
+            pastaMedico = new File("/home/matheus/Programming/Projeto3-Java/Arquivos/Dr. " + nome);
         }
         pastaMedico.mkdir();
     }

@@ -20,10 +20,10 @@ public class Agendamento {
         if (System.getProperty("os.name").equalsIgnoreCase("Windows 11")
                 || System.getProperty("os.name").equalsIgnoreCase("Windows 10")) {
             pastaAgendamentos = new File(
-                    "C:\\workspace\\Projeto3-Java\\Arquivos\\" + medico.getNome() + "\\Agendamentos");
+                    "C:\\workspace\\Projeto3-Java\\Arquivos\\Dr. " + medico.getNome() + "\\Agendamentos");
         } else {
             pastaAgendamentos = new File(
-                    "/home/matheus/Programming/Projeto3-Java/Arquivos/" + medico.getNome() + "/Agendamentos");
+                    "/home/matheus/Programming/Projeto3-Java/Arquivos/Dr. " + medico.getNome() + "/Agendamentos");
         }
         pastaAgendamentos.mkdir();
     }
