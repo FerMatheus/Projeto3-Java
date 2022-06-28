@@ -15,10 +15,12 @@ public class Consulta {
         if (System.getProperty("os.name").equalsIgnoreCase("Windows 11")
                 || System.getProperty("os.name").equalsIgnoreCase("Windows 10")) {
             pastaConsultas = new File(
-                    "C:\\workspace\\Projeto3-Java\\Arquivos\\Dr. " + agendamento.getMedico().getNome() + "\\Consultas");
+                    "C:\\workspace\\Projeto3-Java\\Arquivos\\Medicos\\Dr.(a) " + agendamento.getMedico().getNome()
+                            + "\\Consultas");
         } else {
-            pastaConsultas = new File("/home/matheus/Programming/Projeto3-Java/Arquivos/Dr. " + agendamento.getMedico()
-                    .getNome() + "/Consultas");
+            pastaConsultas = new File(
+                    "/home/matheus/Programming/Projeto3-Java/Arquivos/Medicos/Dr.(a) " + agendamento.getMedico()
+                            .getNome() + "/Consultas");
         }
         pastaConsultas.mkdir();
     }
@@ -28,11 +30,12 @@ public class Consulta {
         File arquivo;
         if (System.getProperty("os.name").equalsIgnoreCase("Windows 11") || System.getProperty("os.name")
                 .equalsIgnoreCase("Windows 10")) {
-            arquivo = new File("C:\\workspace\\Projeto3-Java\\Arquivos\\Dr. " + agendamento.getMedico()
+            arquivo = new File("C:\\workspace\\Projeto3-Java\\Arquivos\\Medicos\\Dr.(a) " + agendamento.getMedico()
                     .getNome() + "\\Consultas\\Paciente id: " + agendamento.getId() + ".txt");
         } else {
-            arquivo = new File("/home/matheus/Programming/Projeto3-Java/Arquivos/Dr. " + agendamento.getMedico()
-                    .getNome() + "/Consultas/Paciente id: " + agendamento.getId() + ".txt");
+            arquivo = new File(
+                    "/home/matheus/Programming/Projeto3-Java/Arquivos/Medicos/Dr.(a) " + agendamento.getMedico()
+                            .getNome() + "/Consultas/Paciente id: " + agendamento.getId() + ".txt");
         }
         FileWriter escritor = new FileWriter(arquivo);
         BufferedWriter escritorBuff = new BufferedWriter(escritor);

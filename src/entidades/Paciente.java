@@ -40,7 +40,7 @@ public class Paciente {
     @Override
     public String toString() {
         return "Nome: " + nome +
-                "Idade: " + idade +
-                "Gênero: " + genero;
+                "\nIdade: " + idade +
+                "\nGênero: " + genero;
     }
 }
